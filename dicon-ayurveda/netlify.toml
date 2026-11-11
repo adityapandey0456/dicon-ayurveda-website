@@ -2,7 +2,11 @@
 [build]
   publish = "public"
   functions = "netlify/functions"
-  command = "npm install"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  SECRETS_SCAN_OMIT_KEYS = "ADMIN_EMAIL,BASE_URL,BUSINESS_NAME,BUSINESS_PHONE,NODE_ENV,ADMIN_NAME,PORT"
 
 [functions]
   node_bundler = "esbuild"

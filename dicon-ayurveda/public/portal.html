@@ -71,11 +71,25 @@ nav a{
   color:#465748;
 }
 nav a:hover{color:var(--gold)}
-.nav-btn{
-  background:var(--green);
-  color:white!important;
-  padding:12px 20px;
-  border-radius:6px;
+nav-btn,
+nav a.nav-btn,
+nav a.nav-btn:link,
+nav a.nav-btn:visited {
+  display: inline-block;
+  background: #183d2b !important;
+  color: #ffffff !important;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 1;
+  visibility: visible;
+  text-decoration: none;
+}
+
+nav a.nav-btn:hover {
+  background: #102b1e !important;
+  color: #ffffff !important;
 }
 .menu-btn{
   display:none;

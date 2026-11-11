@@ -1,0 +1,1079 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183d2b">
+  <meta name="description" content="Discover DICON AYURVEDA and DIACARE Herbal Powder. Explore our Ayurvedic wellness philosophy, product information and order support.">
+
+  <title>DICON AYURVEDA | Natural Wellness & DIACARE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    :root {
+      --forest: #183d2b;
+      --forest-dark: #102c1e;
+      --sage: #eaf0e7;
+      --cream: #faf8f0;
+      --gold: #bd9553;
+      --text: #26362b;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .topbar {
+      background: rgba(250,248,240,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e6e8df;
+    }
+
+    .brand-mark {
+      background: var(--forest) !important;
+      color: white !important;
+    }
+
+    .hero {
+      background: linear-gradient(120deg,#f4f3e9,#e5eddf);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 em,
+    .section-heading h2 em,
+    .about-section h2 em,
+    .track-copy h2 em {
+      color: #547b55;
+    }
+
+    .hero-art {
+      position: relative;
+    }
+
+    .hero-art > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .hero-art .art-card {
+      background: white;
+      box-shadow: 0 25px 70px rgba(25,54,34,.16);
+    }
+
+    .eyebrow {
+      color: #67804e;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: var(--forest) !important;
+      border-color: var(--forest) !important;
+    }
+
+    .btn-primary:hover {
+      background: var(--forest-dark) !important;
+    }
+
+    .text-link {
+      color: var(--forest);
+      font-weight: 700;
+    }
+
+    .benefit-strip {
+      background: var(--forest);
+      color: white;
+    }
+
+    .benefit-strip b {
+      color: #d9bd83;
+    }
+
+    .section {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    .why-section {
+      background: #fff;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .why-card {
+      background: #f5f6ef;
+      border: 1px solid #e7eadf;
+      padding: 30px;
+      border-radius: 18px;
+    }
+
+    .why-icon {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      line-height: 1.8;
+      color: #687469;
+      font-size: 14px;
+    }
+
+    .ayurveda-section {
+      background: #e9efe4;
+    }
+
+    .ayurveda-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .ayurveda-image img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(30,55,34,.12);
+    }
+
+    .ayurveda-copy p {
+      color: #637064;
+      line-height: 1.9;
+      margin-top: 18px;
+    }
+
+    .principle-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .principle {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .principle span {
+      color: #64834f;
+      font-size: 22px;
+    }
+
+    .principle b {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .principle small {
+      color: #6d786c;
+      line-height: 1.6;
+    }
+
+    .nature-banner {
+      min-height: 350px;
+      padding: 70px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(13,38,23,.68),rgba(13,38,23,.68)),
+        url('https://sriamaherbals.com/images/about-new.jpg') center/cover;
+      color: white;
+    }
+
+    .nature-banner h2 {
+      font-size: clamp(32px,5vw,52px);
+      max-width: 750px;
+      margin: 15px auto;
+    }
+
+    .nature-banner p {
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.8;
+      color: #edf2e8;
+    }
+
+    .product-section {
+      background: var(--cream);
+    }
+
+    .product-layout {
+      background: white;
+      padding: 28px;
+      border-radius: 24px;
+      box-shadow: 0 12px 45px rgba(34,51,33,.06);
+    }
+
+    .product-info .pill {
+      background: #eaf0e7;
+      color: var(--forest);
+    }
+
+    .about-section {
+      background: #fff;
+    }
+
+    .brand-values {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .value-item {
+      background: #f5f6ef;
+      padding: 22px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .value-item span {
+      font-size: 27px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .value-item b {
+      font-size: 14px;
+    }
+
+    .track-section {
+      background: #eaf0e7;
+    }
+
+    .track-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 15px 45px rgba(30,55,34,.08);
+    }
+
+    .status-card {
+      background: #f6f8f2;
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 15px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .tracking-update {
+      background: #e9f0e5;
+      border-left: 4px solid #64834f;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 16px 0;
+    }
+
+    .faq-section {
+      background: white;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: 35px auto 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-list details {
+      padding: 20px 22px;
+      background: #f6f7f1;
+      border: 1px solid #e8ebdf;
+      border-radius: 13px;
+    }
+
+    .faq-list summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--forest);
+    }
+
+    .faq-list details p {
+      color: #687469;
+      line-height: 1.8;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    .contact-band {
+      background: var(--forest);
+      color: white;
+    }
+
+    .contact-band .eyebrow {
+      color: #d7c18e;
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--forest);
+    }
+
+    footer {
+      background: #102c1e;
+      color: #e9eee6;
+    }
+
+    footer a {
+      color: #e9eee6;
+    }
+
+    footer .disclaimer {
+      color: #c4d0c2;
+    }
+
+    @media(max-width:800px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ayurveda-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .ayurveda-image img {
+        height: 300px;
+      }
+
+      .brand-values {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .nature-banner {
+        min-height: 300px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .brand-values {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .product-layout {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-mark">D</span>
+    <span>
+      DICON <b>AYURVEDA</b>
+      <small>WELLNESS & HERBAL CARE</small>
+    </span>
+  </a>
+
+  <nav>
+    <a href="#product">Product</a>
+    <a href="#why-ayurveda">Why Ayurveda</a>
+    <a href="#about">About us</a>
+    <a href="#track">Track order</a>
+  </nav>
+
+  <button class="btn btn-outline" id="accountBtn">My account</button>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-copy">
+    <span class="eyebrow">ROOTED IN AYURVEDIC TRADITION</span>
+
+    <h1>
+      Nature's wisdom,<br>
+      <em>everyday wellness.</em>
+    </h1>
+
+    <p>
+      Discover DICON AYURVEDA — where traditional Ayurvedic
+      inspiration meets a thoughtful approach to modern wellness.
+      Explore our featured product, understand our philosophy
+      and connect with our team.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#product">
+        Explore DIACARE <span>↗</span>
+      </a>
+
+      <a class="text-link" href="#why-ayurveda">
+        Discover our philosophy →
+      </a>
+    </div>
+
+    <div class="trust-row">
+      <span>✦ Inspired by tradition</span>
+      <span>✦ Product information</span>
+      <span>✦ Customer assistance</span>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <div class="art-orbit"></div>
+
+    <div class="art-card">
+      <img
+        src="/uploads/diacare-front.jpeg"
+        alt="DIACARE Herbal Powder"
+      >
+
+      <div class="art-caption">
+        <span>FEATURED PRODUCT</span>
+        <b>DIACARE Herbal Powder</b>
+      </div>
+    </div>
+
+    <div class="floating-note">
+      DICON<br>
+      <b>AYURVEDA</b>
+    </div>
+  </div>
+
+</section>
+
+<!-- HIGHLIGHTS -->
+
+<section class="benefit-strip">
+  <div><b>01</b><span>Traditional inspiration</span></div>
+  <div><b>02</b><span>Transparent information</span></div>
+  <div><b>03</b><span>Personal customer support</span></div>
+</section>
+
+<!-- WHY AYURVEDA -->
+
+<section class="section why-section" id="why-ayurveda">
+
+  <div class="section-heading">
+    <span class="eyebrow">THE AYURVEDIC PHILOSOPHY</span>
+    <h2>Why <em>Ayurveda?</em></h2>
+    <p>
+      A traditional Indian system of knowledge that looks at
+      wellbeing through balance, daily habits and mindful living.
+    </p>
+  </div>
+
+  <div class="why-grid">
+
+    <article class="why-card">
+      <div class="why-icon">🌿</div>
+      <h3>Nature-inspired living</h3>
+      <p>
+        Ayurveda has a long tradition of learning from plants,
+        herbs, food and the natural environment. It encourages
+        a thoughtful relationship with everyday living.
+      </p>
+    </article>
+
+    <article class="why-card">
+      <div class="why-icon">☀️</div>
+      <h3>Daily wellness habits</h3>
+      <p>
+        Traditional Ayurvedic philosophy places importance on
+        daily routines, mindful eating, rest and maintaining
+        a balanced lifestyle.
+      </p>
+    </article>
+
+    <article class="why-card">
+      <div class="why-icon">🧘</div>
+      <h3>A holistic perspective</h3>
+      <p>
+        Ayurveda considers different aspects of wellbeing
+        together, including lifestyle, environment, food habits
+        and individual needs.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<!-- AYURVEDA IMAGE AND CONTENT -->
+
+<section class="section ayurveda-section">
+
+  <div class="ayurveda-layout">
+
+    <div class="ayurveda-image">
+      <img
+        src="https://yatharthamshalyaveda.in/assets/images/ayurveda_herbs_1777094711704.png"
+        alt="Traditional Ayurvedic herbs and preparation"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="ayurveda-copy">
+
+      <span class="eyebrow">A TIMELESS TRADITION</span>
+
+      <h2>
+        Inspired by nature.<br>
+        <em>Guided by tradition.</em>
+      </h2>
+
+      <p>
+        Ayurveda is one of India's traditional systems of
+        health knowledge. Its philosophy highlights the
+        relationship between daily routines, food habits,
+        nature and individual wellbeing.
+      </p>
+
+      <p>
+        At DICON AYURVEDA, we believe that customers deserve
+        clear product information and the opportunity to
+        make informed decisions.
+      </p>
+
+      <div class="principle-list">
+
+        <div class="principle">
+          <span>✓</span>
+          <div>
+            <b>Respect for tradition</b>
+            <small>Inspired by India's rich heritage of herbal knowledge.</small>
+          </div>
+        </div>
+
+        <div class="principle">
+          <span>✓</span>
+          <div>
+            <b>Informed choices</b>
+            <small>Understand product information before making a purchase.</small>
+          </div>
+        </div>
+
+        <div class="principle">
+          <span>✓</span>
+          <div>
+            <b>Responsible wellness</b>
+            <small>Encouraging informed decisions and professional guidance.</small>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- NATURE BANNER -->
+
+<section class="nature-banner">
+  <div>
+    <span class="eyebrow" style="color:#e5d4a8">DICON AYURVEDA</span>
+
+    <h2>
+      Wellness begins with thoughtful choices.
+    </h2>
+
+    <p>
+      Explore traditional inspiration, learn about our featured
+      product and connect with our team whenever you need assistance.
+    </p>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+
+<section class="product-section section" id="product">
+
+  <div class="section-heading">
+    <span class="eyebrow">OUR FEATURED PRODUCT</span>
+    <h2>Meet <em>DIACARE</em></h2>
+    <p>
+      Get to know our featured herbal powder and explore its
+      product information.
+    </p>
+  </div>
+
+  <div class="product-layout">
+
+    <div class="product-gallery">
+
+      <div class="main-photo">
+        <img
+          id="mainProductImage"
+          src="/uploads/diacare-front.jpeg"
+          alt="DIACARE Herbal Powder front label"
+        >
+      </div>
+
+      <div class="thumbs">
+        <button class="thumb active" data-image="/uploads/diacare-front.jpeg">
+          <img src="/uploads/diacare-front.jpeg" alt="Front label">
+        </button>
+
+        <button class="thumb" data-image="/uploads/diacare-back.jpeg">
+          <img src="/uploads/diacare-back.jpeg" alt="Back label">
+        </button>
+      </div>
+
+    </div>
+
+    <div class="product-info">
+
+      <span class="pill">HERBAL POWDER</span>
+
+      <h3 id="productName">DIACARE Herbal Powder</h3>
+
+      <div class="price" id="productPrice">
+        Price shared on enquiry
+      </div>
+
+      <p id="productDescription">
+        An Ayurvedic herbal powder marketed for glucose-metabolism
+        support. Please read the product label and consult a
+        qualified healthcare professional before use.
+      </p>
+
+      <div class="product-points">
+        <div>✓ Product label images available</div>
+        <div>✓ Direct customer assistance</div>
+        <div>✓ Unique enquiry tracking ID</div>
+        <div>✓ Order progress updates</div>
+      </div>
+
+      <div class="qty-line">
+        <label for="quantity">Quantity</label>
+
+        <div class="qty-control">
+          <button id="qtyMinus" aria-label="Decrease quantity">−</button>
+          <input id="quantity" type="number" min="1" max="99" value="1">
+          <button id="qtyPlus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-wide" id="orderBtn">
+        Enquire / Order on WhatsApp <span>↗</span>
+      </button>
+
+      <small class="fine-print">
+        Submitting an enquiry does not mean an order is confirmed.
+        Our team will contact you to confirm availability, price and delivery.
+      </small>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- OUR APPROACH -->
+
+<section class="section why-section">
+
+  <div class="section-heading">
+    <span class="eyebrow">THE DICON DIFFERENCE</span>
+    <h2>Our approach to <em>wellness.</em></h2>
+    <p>
+      We want every customer interaction to be clear,
+      helpful and straightforward.
+    </p>
+  </div>
+
+  <div class="brand-values">
+
+    <div class="value-item">
+      <span>🌱</span>
+      <b>Nature-inspired philosophy</b>
+    </div>
+
+    <div class="value-item">
+      <span>📖</span>
+      <b>Clear product information</b>
+    </div>
+
+    <div class="value-item">
+      <span>🤝</span>
+      <b>Direct customer support</b>
+    </div>
+
+    <div class="value-item">
+      <span>📦</span>
+      <b>Order progress updates</b>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about-section section" id="about">
+
+  <div class="about-mark">D</div>
+
+  <div>
+    <span class="eyebrow">ABOUT THE BRAND</span>
+
+    <h2>
+      Tradition with a <em>careful approach.</em>
+    </h2>
+
+    <p>
+      DICON AYURVEDA shares product information and helps
+      customers connect with our team for order enquiries
+      and assistance.
+    </p>
+
+    <p>
+      Our goal is to make product discovery simple and
+      transparent, while encouraging customers to understand
+      product labels and seek appropriate professional advice.
+    </p>
+
+    <a
+      class="text-link"
+      href="https://wa.me/917737241466"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Talk to our team →
+    </a>
+  </div>
+
+</section>
+
+<!-- TRACK ORDER -->
+
+<section class="track-section section" id="track">
+
+  <div class="track-copy">
+    <span class="eyebrow">ORDER SUPPORT</span>
+
+    <h2>
+      Your enquiry,<br>
+      <em>at a glance.</em>
+    </h2>
+
+    <p>
+      Enter the tracking ID shared after submitting your enquiry,
+      along with the phone number used on the form.
+    </p>
+  </div>
+
+  <form id="trackForm" class="track-card">
+
+    <label>
+      Tracking ID
+      <input
+        name="trackingCode"
+        placeholder="DIC-2026-ABC123"
+        required
+      >
+    </label>
+
+    <label>
+      Phone number
+      <input
+        name="phone"
+        type="tel"
+        placeholder="Your 10-digit phone number"
+        required
+      >
+    </label>
+
+    <button class="btn btn-primary btn-wide">
+      Check status
+    </button>
+
+    <div id="trackResult" aria-live="polite"></div>
+
+  </form>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="section faq-section">
+
+  <div class="section-heading">
+    <span class="eyebrow">HELP & INFORMATION</span>
+    <h2>Frequently asked <em>questions.</em></h2>
+    <p>Some useful information before you get started.</p>
+  </div>
+
+  <div class="faq-list">
+
+    <details>
+      <summary>What is DICON AYURVEDA?</summary>
+      <p>
+        DICON AYURVEDA is a brand sharing Ayurvedic-inspired
+        product information and customer assistance.
+      </p>
+    </details>
+
+    <details>
+      <summary>How can I order DIACARE Herbal Powder?</summary>
+      <p>
+        Visit the product section, select your quantity and
+        submit the enquiry form. Our team will contact you
+        to discuss availability, price and delivery.
+      </p>
+    </details>
+
+    <details>
+      <summary>How can I track my enquiry?</summary>
+      <p>
+        After submitting an enquiry, save the tracking ID.
+        Enter that ID and your registered phone number in
+        the Track Order section to view available updates.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is DIACARE a replacement for diabetes medicine?</summary>
+      <p>
+        No. Do not stop, replace or change prescribed diabetes
+        medication based on product information. Consult
+        your qualified healthcare professional before using
+        any herbal product, especially if you take medication
+        that affects blood glucose.
+      </p>
+    </details>
+
+    <details>
+      <summary>How can I contact DICON AYURVEDA?</summary>
+      <p>
+        You can contact our team through WhatsApp using the
+        contact link on this website.
+      </p>
+    </details>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-band">
+
+  <div>
+    <span class="eyebrow">NEED A LITTLE HELP?</span>
+    <h2>We're one message away.</h2>
+    <p>Our team is here to help with product and order enquiries.</p>
+  </div>
+
+  <a
+    class="btn btn-light"
+    href="https://wa.me/917737241466"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Chat on WhatsApp ↗
+  </a>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <a class="brand footer-brand" href="/">
+    <span class="brand-mark">D</span>
+    <span>
+      DICON <b>AYURVEDA</b>
+      <small>WELLNESS & HERBAL CARE</small>
+    </span>
+  </a>
+
+  <p>
+    © <span id="year"></span> DICON AYURVEDA.
+    All rights reserved.
+  </p>
+
+  <div>
+    <a href="#product">Product</a>
+    <a href="#why-ayurveda">Why Ayurveda</a>
+    <a href="#track">Track order</a>
+    <a href="/admin">Admin</a>
+  </div>
+
+  <small class="disclaimer">
+    Product information is for general information only and is
+    not medical advice. Statements about traditional Ayurvedic
+    practices do not establish the clinical effectiveness of
+    this specific product. This product is not represented as
+    a cure or replacement for prescribed treatment. Consult a
+    qualified healthcare professional before use, especially
+    if you have diabetes or take glucose-lowering medication.
+  </small>
+
+</footer>
+
+<!-- ORDER MODAL -->
+
+<div class="modal" id="orderModal">
+
+  <div class="modal-panel">
+
+    <button class="modal-close" data-close="orderModal">×</button>
+
+    <span class="eyebrow">DICON AYURVEDA</span>
+
+    <h2>Send an order enquiry</h2>
+
+    <p class="muted">
+      Share your details. Our team will contact you to confirm the order.
+    </p>
+
+    <form id="orderForm">
+
+      <input type="hidden" name="productId" id="orderProductId">
+
+      <div class="form-grid">
+
+        <label>
+          Full name
+          <input name="name" required maxlength="100" placeholder="Your name">
+        </label>
+
+        <label>
+          Mobile number
+          <input name="phone" type="tel" required placeholder="10-digit mobile number">
+        </label>
+
+        <label>
+          Email (optional)
+          <input name="email" type="email" placeholder="you@example.com">
+        </label>
+
+        <label>
+          Quantity
+          <input name="quantity" type="number" min="1" max="99" value="1" required>
+        </label>
+
+        <label class="full">
+          Delivery address
+          <textarea name="address" required rows="3" placeholder="House, street, city, state, PIN code"></textarea>
+        </label>
+
+        <label class="full">
+          Additional note (optional)
+          <textarea name="notes" rows="2" placeholder="Any delivery instructions"></textarea>
+        </label>
+
+      </div>
+
+      <button class="btn btn-primary btn-wide" type="submit">
+        Submit enquiry
+      </button>
+
+      <div id="orderMessage" aria-live="polite"></div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- ACCOUNT MODAL -->
+
+<div class="modal" id="accountModal">
+
+  <div class="modal-panel">
+
+    <button class="modal-close" data-close="accountModal">×</button>
+
+    <span class="eyebrow">CUSTOMER ACCOUNT</span>
+
+    <h2 id="authTitle">Welcome back</h2>
+
+    <div class="auth-tabs">
+      <button class="active" data-auth="login">Sign in</button>
+      <button data-auth="register">Create account</button>
+    </div>
+
+    <form id="authForm">
+
+      <div id="registerFields" hidden>
+
+        <label>
+          Full name
+          <input name="name" placeholder="Your name">
+        </label>
+
+        <label>
+          Phone number
+          <input name="phone" type="tel" placeholder="Your phone number">
+        </label>
+
+      </div>
+
+      <label>
+        Email
+        <input name="email" type="email" required placeholder="you@example.com">
+      </label>
+
+      <label>
+        Password
+        <input name="password" type="password" required minlength="8" placeholder="At least 8 characters">
+      </label>
+
+      <button class="btn btn-primary btn-wide">Continue</button>
+
+      <div id="authMessage" aria-live="polite"></div>
+
+    </form>
+
+    <div id="accountOrders"></div>
+
+  </div>
+
+</div>
+
+<script src="/app.js"></script>
+
+</body>
+</html>

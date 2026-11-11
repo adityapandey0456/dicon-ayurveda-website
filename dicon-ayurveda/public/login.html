@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183d2b">
+  <title>Sign in | DICON AYURVEDA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body{min-height:100vh;background:#f5f5ed;display:grid;place-items:center;padding:20px;font-family:'DM Sans',sans-serif}
+    .portal{width:min(100%,480px);background:white;border:1px solid #e5e9df;border-radius:22px;padding:36px;box-shadow:0 20px 65px #183d2b12}
+    .portal-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#183d2b;margin-bottom:28px}
+    .portal-brand .mark{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#183d2b;color:white;font:700 25px 'Playfair Display'}
+    .portal-brand b{display:block;letter-spacing:2px;font-size:15px}
+    .portal-brand small{font-size:9px;letter-spacing:2px;color:#71816f}
+    .eyebrow{font-size:10px;letter-spacing:2px;font-weight:800;color:#728653}
+    h1{font:600 34px 'Playfair Display',serif;color:#183d2b;margin:12px 0}
+    .intro{font-size:13px;line-height:1.8;color:#758074;margin-bottom:24px}
+    .tabs{display:grid;grid-template-columns:1fr 1fr;background:#f0f3eb;padding:5px;border-radius:10px;margin-bottom:22px}
+    .tabs button{border:0;background:transparent;padding:11px;border-radius:8px;font-weight:700;color:#667464;cursor:pointer}
+    .tabs button.active{background:#183d2b;color:white}
+    form{display:grid;gap:15px}
+    label{display:grid;gap:7px;font-size:12px;font-weight:700;color:#34483a}
+    input{width:100%;padding:13px;border:1px solid #e1e7dc;border-radius:9px;font:14px 'DM Sans';outline:none}
+    input:focus{border-color:#668a65;box-shadow:0 0 0 3px #668a6518}
+    .portal-btn{width:100%;padding:14px;border:0;border-radius:9px;background:#183d2b;color:white;font-weight:700;font-size:14px;cursor:pointer}
+    .portal-btn:disabled{opacity:.6;cursor:wait}
+    .message{font-size:12px;line-height:1.6}
+    .error{color:#b33b3b}
+    .success{color:#287446}
+    .back{display:block;text-align:center;color:#183d2b;text-decoration:none;font-size:12px;font-weight:700;margin-top:22px}
+    [hidden]{display:none!important}
+    @media(max-width:480px){.portal{padding:25px 20px}h1{font-size:29px}}
+  </style>
+</head>
+<body>
+  <main class="portal">
+    <a class="portal-brand" href="/">
+      <span class="mark">D</span>
+      <span><b>DICON AYURVEDA</b><small>WELLNESS & HERBAL CARE</small></span>
+    </a>
+
+    <span class="eyebrow">CUSTOMER & ADMIN PORTAL</span>
+    <h1 id="pageTitle">Welcome back.</h1>
+    <p class="intro">Sign in to access your DICON AYURVEDA account. Your account role determines which dashboard you can access.</p>
+
+    <div class="tabs">
+      <button type="button" class="active" id="loginTab">Sign in</button>
+      <button type="button" id="registerTab">Create account</button>
+    </div>
+
+    <form id="authForm">
+      <div id="nameField" hidden>
+        <label>Full name
+          <input name="name" maxlength="100" placeholder="Your full name">
+        </label>
+      </div>
+
+      <div id="phoneField" hidden>
+        <label>Phone number
+          <input name="phone" type="tel" placeholder="10-digit phone number">
+        </label>
+      </div>
+
+      <label>Email address
+        <input name="email" type="email" required autocomplete="username" placeholder="you@example.com">
+      </label>
+
+      <label>Password
+        <input name="password" type="password" required minlength="8" autocomplete="current-password" placeholder="At least 8 characters">
+      </label>
+
+      <button class="portal-btn" id="submitBtn">Sign in</button>
+      <div class="message" id="message" aria-live="polite"></div>
+    </form>
+
+    <a class="back" href="/">← Back to DICON AYURVEDA website</a>
+  </main>
+
+<script>
+const $ = s => document.querySelector(s);
+let mode = 'login';
+
+async function api(url, options = {}) {
+  const response = await fetch(url, {
+    credentials: 'same-origin',
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      ...(options.headers || {})
+    }
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.error || 'Request failed');
+  return data;
+}
+
+function goByRole(user) {
+  if (user.role === 'admin') {
+    window.location.replace('/admin');
+  } else {
+    window.location.replace('/account');
+  }
+}
+
+function setMode(nextMode) {
+  mode = nextMode;
+  const registering = mode === 'register';
+
+  $('#loginTab').classList.toggle('active', !registering);
+  $('#registerTab').classList.toggle('active', registering);
+  $('#nameField').hidden = !registering;
+  $('#phoneField').hidden = !registering;
+  $('#nameField input').required = registering;
+  $('#phoneField input').required = registering;
+  $('#pageTitle').textContent = registering ? 'Create your account.' : 'Welcome back.';
+  $('#submitBtn').textContent = registering ? 'Create customer account' : 'Sign in';
+  $('#message').textContent = '';
+}
+
+$('#loginTab').onclick = () => setMode('login');
+$('#registerTab').onclick = () => setMode('register');
+
+$('#authForm').addEventListener('submit', async event => {
+  event.preventDefault();
+  const button = $('#submitBtn');
+  button.disabled = true;
+  button.textContent = 'Please wait...';
+  $('#message').textContent = '';
+
+  const values = Object.fromEntries(new FormData(event.currentTarget));
+
+  try {
+    const result = await api(`/api/auth/${mode}`, {
+      method: 'POST',
+      body: JSON.stringify(values)
+    });
+
+    $('#message').textContent = 'Signed in successfully. Redirecting...';
+    $('#message').className = 'message success';
+    goByRole(result.user);
+  } catch (error) {
+    $('#message').textContent = error.message;
+    $('#message').className = 'message error';
+    button.disabled = false;
+    button.textContent = mode === 'register' ? 'Create customer account' : 'Sign in';
+  }
+});
+
+// Existing signed-in users go directly to their dashboard.
+api('/api/auth/me').then(result => {
+  if (result.user) goByRole(result.user);
+}).catch(() => {});
+</script>
+</body>
+</html>

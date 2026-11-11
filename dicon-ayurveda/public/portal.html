@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#183d2b">
+<meta name="description" content="Discover DICON AYURVEDA and DIACARE Herbal Powder. Explore our approach to traditional Ayurvedic wellness and herbal care.">
+<title>DICON AYURVEDA | Nature Inspired Wellness</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#183d2b;
+  --dark:#102b1e;
+  --light:#f6f7ef;
+  --gold:#b18a4b;
+  --muted:#788275;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--light);
+  color:#203c2b;
+  font-family:'DM Sans',sans-serif;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+header{
+  height:82px;
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:white;
+  border-bottom:1px solid #e5e9df;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+.mark{
+  width:45px;height:45px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--green);
+  color:white;
+  font:700 26px 'Playfair Display';
+}
+.brand small{
+  display:block;
+  font-size:9px;
+  letter-spacing:2px;
+  color:var(--muted);
+  margin-top:4px;
+}
+nav{display:flex;align-items:center;gap:28px}
+nav a{
+  font-size:12px;
+  font-weight:700;
+  color:#465748;
+}
+nav a:hover{color:var(--gold)}
+.nav-btn{
+  background:var(--green);
+  color:white!important;
+  padding:12px 20px;
+  border-radius:6px;
+}
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  font-size:26px;
+  color:var(--green);
+  cursor:pointer;
+}
+.hero{
+  min-height:590px;
+  background:
+  linear-gradient(90deg,#102b1eeb 0%,#102b1ea8 48%,#102b1e22 100%),
+  url('https://purvival.com/cdn/shop/articles/687d947b84572425aeda5a01-1753092209656.jpg?v=1753160632&width=1100')center/cover;
+  display:flex;
+  align-items:center;
+  padding:70px 9%;
+  color:white;
+}
+.hero-content{max-width:650px}
+.eyebrow{
+  font-size:10px;
+  letter-spacing:3px;
+  font-weight:800;
+  color:#d4bd8d;
+}
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+}
+.hero h1{
+  font-size:clamp(43px,6vw,70px);
+  line-height:1.12;
+  margin:22px 0;
+  font-weight:600;
+}
+.hero p{
+  color:#e2e9df;
+  font-size:15px;
+  line-height:1.9;
+  max-width:540px;
+}
+.buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.btn{
+  display:inline-block;
+  padding:15px 25px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:800;
+  transition:.2s;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:white}
+.btn-outline{border:1px solid #ffffff9c;color:white}
+.section{
+  padding:85px 8%;
+}
+.section-heading{
+  text-align:center;
+  max-width:650px;
+  margin:0 auto 45px;
+}
+.section-heading h2{
+  font-size:clamp(30px,4vw,43px);
+  color:var(--green);
+  margin:14px 0;
+}
+.section-heading p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.9;
+}
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+.intro-image {
+  min-height: 430px;
+  border-radius: 18px;
+  background:
+    linear-gradient(0deg, #102b1e12, transparent),
+    url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?auto=format&fit=crop&w=1200&q=90')
+    center / cover no-repeat;
+  box-shadow: 0 15px 40px #183d2b18;
+}
+.intro-copy h2{
+  font-size:40px;
+  color:var(--green);
+  line-height:1.2;
+}
+.intro-copy p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+}
+.text-link{
+  display:inline-block;
+  margin-top:15px;
+  color:var(--green);
+  font-weight:800;
+  font-size:13px;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:6px;
+}
+.benefits{
+  background:#edf1e8;
+}
+.benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.benefit{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  border:1px solid #e5e9df;
+}
+.benefit-icon{
+  width:52px;height:52px;
+  display:grid;
+  place-items:center;
+  background:#eaf0e7;
+  border-radius:50%;
+  font-size:24px;
+}
+.benefit h3{
+  font-size:22px;
+  color:var(--green);
+  margin:20px 0 10px;
+}
+.benefit p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
+}
+.product-section{
+  background:white;
+}
+.product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+.product-image{
+  min-height:430px;
+  border-radius:18px;
+  background:#f4f4ec;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.product-image img{
+  width:100%;
+  height:430px;
+  object-fit:contain;
+  padding:20px;
+}
+.product-info h2{
+  font-size:43px;
+  color:var(--green);
+  margin:15px 0;
+}
+.product-info p{
+  font-size:14px;
+  line-height:2;
+  color:var(--muted);
+}
+.product-points{
+  padding:0;
+  list-style:none;
+  margin:25px 0;
+}
+.product-points li{
+  padding:10px 0;
+  border-bottom:1px solid #e9ede5;
+  font-size:13px;
+}
+.product-points li:before{
+  content:"✓";
+  color:var(--gold);
+  font-weight:800;
+  margin-right:12px;
+}
+.product-note{
+  font-size:11px!important;
+  color:#8b8e83!important;
+}
+.quality{
+  background:var(--green);
+  color:white;
+  text-align:center;
+}
+.quality h2{
+  font-size:40px;
+  margin:15px 0;
+}
+.quality p{
+  max-width:720px;
+  margin:0 auto;
+  color:#d9e3d8;
+  font-size:14px;
+  line-height:2;
+}
+.quality .eyebrow{color:#d4bd8d}
+.contact{
+  text-align:center;
+}
+.contact h2{
+  font-size:40px;
+  color:var(--green);
+}
+.contact p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.8;
+}
+.contact-actions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:25px;
+}
+footer{
+  background:#102b1e;
+  color:white;
+  padding:45px 8% 20px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:35px;
+  padding-bottom:30px;
+}
+footer h3{font-size:23px}
+footer p,footer a{
+  color:#c1cfc1;
+  font-size:12px;
+  line-height:2;
+}
+footer a{display:block}
+.footer-bottom{
+  border-top:1px solid #ffffff24;
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  color:#aab8a9;
+  font-size:11px;
+}
+@media(max-width:800px){
+  header{padding:0 5%}
+  nav{
+    display:none;
+    position:absolute;
+    top:82px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:20px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:20px;
+    box-shadow:0 12px 20px #00000012;
+  }
+  nav.open{display:flex}
+  .menu-btn{display:block}
+  .hero{min-height:530px;padding:55px 7%}
+  .section{padding:65px 6%}
+  .intro-grid,.product-grid{grid-template-columns:1fr;gap:30px}
+  .intro-image{min-height:300px}
+  .benefit-grid{grid-template-columns:1fr 1fr}
+  .product-image{min-height:320px}
+  .product-image img{height:320px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .benefit-grid{grid-template-columns:1fr}
+  .hero h1{font-size:43px}
+  .hero p{font-size:13px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:10px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="/">
+    <span class="mark">D</span>
+    <span>DICON AYURVEDA
+      <small>WELLNESS & HERBAL CARE</small>
+    </span>
+  </a>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About Ayurveda</a>
+    <a href="#benefits">Our Philosophy</a>
+    <a href="#product">Our Product</a>
+    <a href="/store">Shop</a>
+    <a href="/login?role=customer" class="nav-btn">My Account</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="eyebrow">NATURE • TRADITION • WELLNESS</span>
+    <h1>Rediscover the goodness of nature.</h1>
+    <p>
+      Welcome to DICON AYURVEDA — a wellness brand inspired by
+      traditional Ayurvedic knowledge and a thoughtful approach
+      to herbal care.
+    </p>
+    <div class="buttons">
+      <a href="/store" class="btn btn-gold">Explore Our Product →</a>
+      <a href="#about" class="btn btn-outline">Discover Ayurveda</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="intro-grid">
+    <div class="intro-image"></div>
+    <div class="intro-copy">
+      <span class="eyebrow">THE AYURVEDIC APPROACH</span>
+      <h2>A tradition rooted in nature.</h2>
+      <p>
+        Ayurveda is a traditional system of wellness that originated
+        in India. It emphasizes balance, daily routines, mindful living
+        and the traditional use of herbs.
+      </p>
+      <p>
+        At DICON AYURVEDA, we draw inspiration from this heritage
+        while focusing on product information, responsible use
+        and a thoughtful customer experience.
+      </p>
+      <a href="#product" class="text-link">Discover DIACARE →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section benefits" id="benefits">
+  <div class="section-heading">
+    <span class="eyebrow">OUR PHILOSOPHY</span>
+    <h2>Inspired by the wisdom of Ayurveda</h2>
+    <p>
+      Our approach is guided by an appreciation for traditional
+      knowledge and a commitment to helping customers make
+      informed choices.
+    </p>
+  </div>
+
+  <div class="benefit-grid">
+    <article class="benefit">
+      <div class="benefit-icon">🌿</div>
+      <h3>Nature Inspired</h3>
+      <p>
+        Inspired by the traditional role of herbs and botanicals
+        in Indian wellness practices.
+      </p>
+    </article>
+
+    <article class="benefit">
+      <div class="benefit-icon">🪷</div>
+      <h3>Traditional Heritage</h3>
+      <p>
+        Respecting India's long-standing Ayurvedic heritage
+        and its holistic approach to everyday wellbeing.
+      </p>
+    </article>
+
+    <article class="benefit">
+      <div class="benefit-icon">🤝</div>
+      <h3>Customer Care</h3>
+      <p>
+        Clear product information, accessible support and
+        a convenient experience from enquiry to delivery.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section product-section" id="product">
+  <div class="product-grid">
+    <div class="product-image">
+      <img
+        src="/uploads/diacare-back.jpeg"
+        alt="DIACARE Herbal Powder"
+        onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;text-align:center;color:#788275;padding:30px&quot;>DIACARE Herbal Powder<br><small>Product image will appear here</small></div>'"
+      >
+    </div>
+
+    <div class="product-info">
+      <span class="eyebrow">FEATURED PRODUCT</span>
+      <h2>DIACARE Herbal Powder</h2>
+      <p>
+        Discover DIACARE, a herbal powder offered by DICON AYURVEDA.
+        Explore its product details, ingredients, directions for use
+        and packaging information before making a purchase enquiry.
+      </p>
+
+      <ul class="product-points">
+        <li>Herbal powder formulation</li>
+        <li>Product information and usage guidance</li>
+        <li>Convenient customer enquiry process</li>
+        <li>Order status and delivery tracking</li>
+      </ul>
+
+      <a href="/store" class="btn btn-gold">View Product Details →</a>
+
+      <p class="product-note">
+        Please refer to the product label for ingredients, dosage,
+        warnings and other applicable information. This product is
+        not a substitute for prescribed medical treatment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section quality">
+  <span class="eyebrow">DICON AYURVEDA</span>
+  <h2>Tradition meets a thoughtful experience.</h2>
+  <p>
+    We aim to make discovering our products simple and convenient.
+    From exploring product information to submitting an enquiry
+    and checking delivery updates, our website brings the experience
+    together in one place.
+  </p>
+</section>
+
+<section class="section contact">
+  <span class="eyebrow">WE ARE HERE TO HELP</span>
+  <h2>Connect with DICON AYURVEDA</h2>
+  <p>
+    Have a question about DIACARE or need assistance with an enquiry?
+    Get in touch with our team.
+  </p>
+
+  <div class="contact-actions">
+    <a href="https://wa.me/917737241466" class="btn btn-gold" target="_blank" rel="noopener">
+      WhatsApp Us
+    </a>
+    <a href="/store" class="btn" style="background:#183d2b;color:white">
+      Explore Products
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>DICON AYURVEDA</h3>
+      <p>
+        Nature inspired wellness and herbal care.
+        Explore our products and connect with our team.
+      </p>
+    </div>
+
+    <div>
+      <h3>Explore</h3>
+      <a href="/">Home</a>
+      <a href="#about">About Ayurveda</a>
+      <a href="#product">Our Product</a>
+      <a href="/store">Shop</a>
+    </div>
+
+    <div>
+      <h3>Customer Support</h3>
+      <a href="/login?role=customer">My Account</a>
+      <a href="/store#track">Track Order</a>
+      <a href="https://wa.me/917737241466" target="_blank" rel="noopener">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> DICON AYURVEDA. All rights reserved.</span>
+    <span>WELLNESS • HERBAL CARE • TRADITION</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const menuBtn = document.getElementById('menuBtn');
+const navigation = document.getElementById('navigation');
+
+menuBtn.addEventListener('click', () => {
+  navigation.classList.toggle('open');
+});
+
+navigation.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navigation.classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
